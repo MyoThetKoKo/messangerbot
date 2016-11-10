@@ -127,3 +127,18 @@ function sendGenericMessage(sender) {
 app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'))
 })
+
+app.post('/webhook/', function (req, res) {
+    let messaging_events = req.body.entry[0].messaging
+    for (let i = 0; i < messaging_events.length; i++) {
+        let event = req.body.entry[0].messaging[i]
+        let sender = event.sender.id
+        if (event.message && event.message.text) {
+            let text = event.message.text
+            sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+        }
+    }
+    res.sendStatus(200)
+})
+
+const token = "EAAHq78xUqBMBAPOpPFMWcEVb18ZAbBHRVmueuQGpxxz0O45gP0zCZBNfZBIxHQdKCjIsNHjGuKOdBLDLhYAvTmpLLNqJR1M4wbL5Ppxw37d2GQ2l4dbkcg9TMMT8gfIm1yyFxC8xZCMZAq6nXYDkZCYQK0OZBb0gBKZCrCyaAZA3OEwZDZD"

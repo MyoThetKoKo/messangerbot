@@ -42,7 +42,7 @@ app.post('/webhook/', function (req, res) {
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
-			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
+			sendTextMessage(sender, "Please use a few words to tell me what you want to know more about. For example, you could type “headlines,” “Rio Olympics,” or “politics.” ", token)
 			continue
 		}
 	}
@@ -139,8 +139,7 @@ function sendGreetingMessage(sender) {
           {
             "type":"postback",
             "title":"Start Chatting",
-            "payload": "Please use a few words to tell me what you want to know more about. For example, you could type “headlines,” “Rio Olympics,” or “politics.” ",
-	  }
+            }
         ]
       }
                 }

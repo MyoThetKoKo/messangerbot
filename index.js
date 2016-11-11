@@ -136,11 +136,7 @@ function sendGreetingMessage(sender) {
                             "url":"http://www.duwun.com.mm/",
                             "title":"Show Website"
                          },
-          {
-            "type":"postback",
-            "title":"Start Chatting",
-            "payload":"USER_DEFINED_PAYLOAD"
-          }
+          
         ]
       }
                 }

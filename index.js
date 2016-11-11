@@ -139,8 +139,8 @@ function sendGreetingMessage(sender) {
           {
             "type":"postback",
             "title":"Start Chatting",
-            "payload":{"text":"Please use a few words to tell me what you want to know more about.For example, you could type “headlines,” “Rio Olympics,” or “politics.”"}
-          }
+            "payload": "Please use a few words to tell me what you want to know more about. For example, you could type “headlines,” “Rio Olympics,” or “politics.” ",
+	  }
         ]
       }
                 }

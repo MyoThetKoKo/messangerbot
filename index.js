@@ -34,11 +34,11 @@ app.post('/webhook/', function (req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
-			if (text === 'Generic') {
+			if (text === 'Show') {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+			sendGreetingMessage(sender)
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
@@ -123,6 +123,44 @@ function sendGenericMessage(sender) {
 	})
 }
 
+function sendGreetingMessage(sender) {
+    let messageData = {
+          "attachment":{
+      "type":"template",
+      "payload":{
+                        "template_type":"button",
+                         "text":"Hi there, let’s get started. I’ll send you top stories every day",
+                            "buttons":[
+                         {
+                            "type":"web_url",
+                            "url":"http://www.duwun.com.mm/",
+                            "title":"Show Website"
+                         },
+          {
+            "type":"postback",
+            "title":"Start Chatting",
+            "payload":"USER_DEFINED_PAYLOAD"
+          }
+        ]
+      }
+                }
+        }
+        request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: {access_token:token},
+        method: 'POST',
+        json: {
+            recipient: {id:sender},
+            message: messageData,
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
+    }
 // spin spin sugar
 app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'))

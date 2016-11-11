@@ -77,34 +77,111 @@ function sendTextMessage(sender, text) {
 function sendGenericMessage(sender) {
 	let messageData = {
 		"attachment": {
-			"type": "template",
-			"payload": {
-				"template_type": "generic",
-				"elements": [{
-					"title": "First card",
-					"subtitle": "Element #1 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-					"buttons": [{
-						"type": "web_url",
-						"url": "https://www.messenger.com",
-						"title": "web url"
-					}, {
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for first element in a generic bubble",
-					}],
-				}, {
-					"title": "Second card",
-					"subtitle": "Element #2 of an hscroll",
-					"image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-					"buttons": [{
-						"type": "postback",
-						"title": "Postback",
-						"payload": "Payload for second element in a generic bubble",
-					}],
-				}]
-			}
-		}
+        "type": "template",
+ "payload": {
+            "template_type": "list",
+ "elements": [
+                {
+                    "title": "Duwun Testing",
+                    "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+                    "subtitle": "See all our news",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "http://www.duwun.com.mm/",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "View",
+                            "type": "web_url",
+                            "url": "http://www.duwun.com.mm/",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                        }
+                    ]
+                },
+                {
+                    "title": "အမ်ိဳးသမီးေတြရဲ႕ က်န္းမာေရးအတြက္ အေကာင္းဆံုးအစားအစာ (၃) မ်ိဳး",
+                    "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+                    "subtitle": "အမ်ိဳးသမီးေတြရဲ႕ က်န္းမာေရးအတြက္ အေကာင္းဆံုးအစားအစာ (၃) မ်ိဳး",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "http://www.duwun.com.mm/lifestyle/food-travel/-id5740284.html",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "See Now",
+                            "type": "web_url",
+                            "url": "http://www.duwun.com.mm/lifestyle/food-travel/-id5740284.html",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                        }
+                    ]                
+                },
+                {
+                    "title": "ျမစ္ဆံုစီမံကိန္း အစီရင္ခံစာ သမၼတထံ ဒီေန႔တင္မယ္",
+                    "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+                    "subtitle": "ျမစ္ဆံုစီမံကိန္း အစီရင္ခံစာ သမၼတထံ ဒီေန႔တင္မယ္",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "http://www.duwun.com.mm/news/local/-id5741197.html",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "See Now",
+                            "type": "web_url",
+                            "url": "http://www.duwun.com.mm/news/local/-id5741197.html",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                        }
+                    ]                
+                },
+                {
+                    "title": "အာဆင္နယ္ႏွင့္ လစာကိစၥအဆင္မေျပသည့္ အိုေဇးလ္ကို မန္ယူစိတ္ဝင္စားေန",
+                    "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+                    "subtitle": "အာဆင္နယ္ႏွင့္ လစာကိစၥအဆင္မေျပသည့္ အိုေဇးလ္ကို မန္ယူစိတ္ဝင္စားေန",
+                    "default_action": {
+                        "type": "web_url",
+                        "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+                        "messenger_extensions": true,
+                        "webview_height_ratio": "tall",
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                    },
+                    "buttons": [
+                        {
+                            "title": "See Now",
+                            "type": "web_url",
+                            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+                            "messenger_extensions": true,
+                            "webview_height_ratio": "tall",
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                        }
+                    ]                
+                }
+            ],
+             "buttons": [
+                {
+                    "title": "View More",
+                    "type": "postback",
+                    "payload": "payload"                        
+                }
+            ]  
+        }
+    }
+	}
+    
+
 	}
 	request({
 		url: 'https://graph.facebook.com/v2.6/me/messages',

@@ -40,7 +40,11 @@ app.post('/webhook/', function (req, res) {
 			}
 			sendGreetingMessage(sender)
 		}
-		
+		if (event.postback) {
+			let text = JSON.stringify(event.postback)
+			sendTextMessage(sender, text.substring(0, 200), token)
+			continue
+		}
 	}
 	res.sendStatus(200)
 })

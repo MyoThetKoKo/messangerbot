@@ -151,7 +151,7 @@ function sendlistMessage(sender)
                         "url": "http://www.duwun.com.mm/news/local/-id5776120.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                        
                     },
                     "buttons": 
                     [
@@ -161,7 +161,7 @@ function sendlistMessage(sender)
                             "url": "http://www.duwun.com.mm/news/local/-id5776120.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                                                 
                         }
                     ]
                 },
@@ -175,7 +175,7 @@ function sendlistMessage(sender)
                         "url": "http://www.duwun.com.mm/entertainment/local-celebrity/m-id5776793.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                      
                     },
                     "buttons": 
                     [
@@ -185,7 +185,7 @@ function sendlistMessage(sender)
                             "url": "http://www.duwun.com.mm/entertainment/local-celebrity/m-id5776793.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                                                 
                         }
                     ]                
                 },
@@ -199,7 +199,7 @@ function sendlistMessage(sender)
                         "url": "http://www.duwun.com.mm/sports/epl/-id5775404.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                        
                     },
                     "buttons": 
                     [
@@ -209,7 +209,7 @@ function sendlistMessage(sender)
                             "url": "http://www.duwun.com.mm/sports/epl/-id5775404.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                                                
                         }
                     ]                
                 },
@@ -223,7 +223,7 @@ function sendlistMessage(sender)
                         "url": "http://www.duwun.com.mm/lifestyle/beauty-fashion/-id5725028.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://duwunbot.herokuapp.com/"
+                        
                     },
                     "buttons": 
                     [
@@ -233,7 +233,7 @@ function sendlistMessage(sender)
                             "url": "http://www.duwun.com.mm/lifestyle/beauty-fashion/-id5725028.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
+                                                   
                         }
                     ]                
                 }

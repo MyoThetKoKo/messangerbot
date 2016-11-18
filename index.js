@@ -38,7 +38,7 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			else if (text=== 'list'){
+			else if (text === 'list'){
 				sendlistMessage(sender)
 				continue
 			}
@@ -142,98 +142,98 @@ function sendlistMessage(sender)
             "elements": 
            [
                 {
-                    "title": "Classic T-Shirt Collection",
+                    "title": "၂၀၁၆ ခုႏွစ္အတြက္ လူသားခ်င္း စာနာေထာက္ထားမႈ သူရဲေကာင္းဆု ရရွိခဲ့တဲ့ ေဒါက္တာစင္သီယာေမာင္",
                     "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
                     "subtitle": "See all our colors",
                     "default_action": 
                     {
                         "type": "web_url",
-                        "url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+                        "url": "http://www.duwun.com.mm/news/local/-id5776120.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
                     },
                     "buttons": 
                     [
                         {
                             "title": "View",
                             "type": "web_url",
-                            "url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+                            "url": "http://www.duwun.com.mm/news/local/-id5776120.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
                         }
                     ]
                 },
                 {
-                    "title": "Classic White T-Shirt",
+                    "title": "ပညာေရး ထိခုိက္ေနလို႕ စိတ္ညစ္ေနရတဲ့ M ဆိုင္းလု",
                     "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
                     "subtitle": "100% Cotton, 200% Comfortable",
                     "default_action": 
                     {
                         "type": "web_url",
-                        "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
+                        "url": "http://www.duwun.com.mm/entertainment/local-celebrity/m-id5776793.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
                     },
                     "buttons": 
                     [
                         {
-                            "title": "Shop Now",
+                            "title": "view More",
                             "type": "web_url",
-                            "url": "https://peterssendreceiveapp.ngrok.io/shop?item=100",
+                            "url": "http://www.duwun.com.mm/entertainment/local-celebrity/m-id5776793.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
                         }
                     ]                
                 },
                 {
-                    "title": "Classic Blue T-Shirt",
-                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
+                    "title": "မက္ဆီ ဘာစီလိုနာအသင္းက ထြက္ခဲ့လွ်င္ မန္စီးတီးႏွင့္ ၿပိဳင္ၿပီး ေခၚရန္ခက္မည္ကို မန္ယူစိုးရိမ္",
+                    "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
                     "subtitle": "100% Cotton, 200% Comfortable",
                     "default_action": 
                     {
                         "type": "web_url",
-                        "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
+                        "url": "http://www.duwun.com.mm/sports/epl/-id5775404.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
                     },
                     "buttons": 
                     [
                         {
-                            "title": "Shop Now",
+                            "title": "SEE Now",
                             "type": "web_url",
-                            "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
+                            "url": "http://www.duwun.com.mm/sports/epl/-id5775404.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
                         }
                     ]                
                 },
                 {
-                    "title": "Classic Black T-Shirt",
-                    "image_url": "https://peterssendreceiveapp.ngrok.io/img/black-t-shirt.png",
+                    "title": "ဝိတ္ခ်ေနတဲ့ လူေတြ ညစာကို ဘယ္အခ်ိန္မွာ စားသင့္သလဲ",
+                    "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
                     "subtitle": "100% Cotton, 200% Comfortable",
                     "default_action": 
                     {
                         "type": "web_url",
-                        "url": "https://peterssendreceiveapp.ngrok.io/view?item=102",
+                        "url": "http://www.duwun.com.mm/lifestyle/beauty-fashion/-id5725028.html",
                         "messenger_extensions": true,
                         "webview_height_ratio": "tall",
-                        "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                        "fallback_url": "https://duwunbot.herokuapp.com/"
                     },
                     "buttons": 
                     [
                         {
-                            "title": "Shop Now",
+                            "title": "See Now",
                             "type": "web_url",
-                            "url": "https://peterssendreceiveapp.ngrok.io/shop?item=102",
+                            "url": "http://www.duwun.com.mm/lifestyle/beauty-fashion/-id5725028.html",
                             "messenger_extensions": true,
                             "webview_height_ratio": "tall",
-                            "fallback_url": "https://peterssendreceiveapp.ngrok.io/"                        
+                            "fallback_url": "https://duwunbot.herokuapp.com/"                        
                         }
                     ]                
                 }
@@ -242,8 +242,8 @@ function sendlistMessage(sender)
              	[
                 {
                     "title": "View More",
-                    "type": "postback",
-                    "payload": "payload"                        
+                    "type": "web_url",
+                    "url": "http://www.duwun.com.mm/"                        
                 }
             	] 
             } 

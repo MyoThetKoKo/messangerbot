@@ -137,10 +137,7 @@ function sendGreetingMessage(sender) {
                             "title":"Show Website"
                          },
           
-            "type":"postback",
-            "title":"Start Chatting",
-	     "Please use a few words to tell me what you want to know more about. For example, you could type 'headlines,Rio Olympics,or politics. '" ,
-            
+           
         ]
       }
                 }

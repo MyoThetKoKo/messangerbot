@@ -39,7 +39,23 @@ app.post('/webhook/', function (req, res) {
         continue
       }
       else if (text === 'Topstories'){
-        sendTopstoriesMessage(sender)
+        sendlistMessage(sender)
+        continue
+      }
+      else if (text === 'News'){
+        sendlistMessage(sender)
+        continue
+      }
+      else if (text === 'Entertainment'){
+        sendlistMessage(sender)
+        continue
+      }
+      else if (text === 'lifestyle'){
+        sendlistMessage(sender)
+        continue
+      }
+      else if (text === 'Sports'){
+        sendlistMessage(sender)
         continue
       }
       sendGreetingMessage(sender)
@@ -178,7 +194,205 @@ function sendTopstoriesMessage(sender)
   })
 }
 
+function sendNewsMessage(sender) 
+{
+  let messageData = {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "Duwun1",
+          "subtitle": "Element #1 of an hscroll",
+          "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+          "buttons": [{
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for second element in a generic bubble",
+          }],
+        }]
+      }
+    }
+  }
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: {access_token:token},
+    method: 'POST',
+    json: {
+      recipient: {id:sender},
+      message: messageData,
+    }
+  }, function(error, response, body) {
+    if (error) {
+      console.log('Error sending messages: ', error)
+    } else if (response.body.error) {
+      console.log('Error: ', response.body.error)
+    }
+  })
+}
 
+function sendEntertainmentMessage(sender) 
+{
+  let messageData = {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "Duwun1",
+          "subtitle": "Element #1 of an hscroll",
+          "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+          "buttons": [{
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for second element in a generic bubble",
+          }],
+        }]
+      }
+    }
+  }
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: {access_token:token},
+    method: 'POST',
+    json: {
+      recipient: {id:sender},
+      message: messageData,
+    }
+  }, function(error, response, body) {
+    if (error) {
+      console.log('Error sending messages: ', error)
+    } else if (response.body.error) {
+      console.log('Error: ', response.body.error)
+    }
+  })
+}
+
+function sendSportsMessage(sender) 
+{
+  let messageData = {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "Duwun1",
+          "subtitle": "Element #1 of an hscroll",
+          "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.0-9/12342591_814669595343202_7303905748891865152_n.png?oh=d2eaed4788b2c1e429e4f1fd474be99c&oe=588D1A27",
+          "buttons": [{
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for second element in a generic bubble",
+          }],
+        }]
+      }
+    }
+  }
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: {access_token:token},
+    method: 'POST',
+    json: {
+      recipient: {id:sender},
+      message: messageData,
+    }
+  }, function(error, response, body) {
+    if (error) {
+      console.log('Error sending messages: ', error)
+    } else if (response.body.error) {
+      console.log('Error: ', response.body.error)
+    }
+  })
+}
+
+function sendlifestyleMessage(sender) 
+{
+  let messageData = {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "Duwun1",
+          "subtitle": "Element #1 of an hscroll",
+          "image_url": "https://drive.google.com/open?id=0BxuIjI-2X6CPTUpzUHdwR2wwYnBKQkZKb3BPUXNGd0dNOXo4",
+          "buttons": [{
+            "type": "web_url",
+            "url": "https://drive.google.com/open?id=0BxuIjI-2X6CPZHY3b19Lc3VSUVlqMWxVNUtCV1FWSUpwcmFz",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://drive.google.com/open?id=0BxuIjI-2X6CPb2JXRnBTbFVacTE4aGszVUJRSGJISkRmQ1RF",
+          "buttons": [{
+            "type": "postback",
+            "title": "Postback",
+            "payload": "Payload for second element in a generic bubble",
+          }],
+        }]
+      }
+    }
+  }
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: {access_token:token},
+    method: 'POST',
+    json: {
+      recipient: {id:sender},
+      message: messageData,
+    }
+  }, function(error, response, body) {
+    if (error) {
+      console.log('Error sending messages: ', error)
+    } else if (response.body.error) {
+      console.log('Error: ', response.body.error)
+    }
+  })
+}
 
 function sendGreetingMessage(sender) {
     let messageData = {

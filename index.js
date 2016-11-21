@@ -39,23 +39,23 @@ app.post('/webhook/', function (req, res) {
         continue
       }
       else if (text === 'Topstories'){
-        sendlistMessage(sender)
+        sendTopstoriesMessage(sender)
         continue
       }
       else if (text === 'News'){
-        sendlistMessage(sender)
+        sendNewsMessage(sender)
         continue
       }
       else if (text === 'Entertainment'){
-        sendlistMessage(sender)
+        sendEntertainmentMessage(sender)
         continue
       }
       else if (text === 'lifestyle'){
-        sendlistMessage(sender)
+        sendlifestyleMessage(sender)
         continue
       }
       else if (text === 'Sports'){
-        sendlistMessage(sender)
+        sendSportsMessage(sender)
         continue
       }
       sendGreetingMessage(sender)

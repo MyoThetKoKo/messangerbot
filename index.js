@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         continue
       }
       else if (text === 'Topstories'){
-        sendTopstoriesMessage(sender)
+        sendlistMessage(sender)
         continue
       }
       else if (text === 'News'){
@@ -111,7 +111,7 @@ function sendGenericMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
           }],
         }, {
@@ -119,11 +119,30 @@ function sendGenericMessage(sender)
           "subtitle": "Element #2 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
           "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
             "type": "postback",
-            "title": "Postback",
-            "payload": "Payload for second element in a generic bubble",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
           }],
-        }]
+         },
+        {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+         }
+        ]
       }
     }
   }
@@ -161,7 +180,7 @@ function sendTopstoriesMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
           }],
         }, {
@@ -170,10 +189,23 @@ function sendTopstoriesMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14695309_659017747593658_7823234448286722387_n.jpg?oh=01b1df2658a85e53a1fc91f085b59011&oe=58BCEF8A",
           "buttons": [{
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for second element in a generic bubble",
           }],
-        }]
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+         }]
       }
     }
   }
@@ -211,7 +243,7 @@ function sendNewsMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
           }],
         }, {
@@ -220,10 +252,23 @@ function sendNewsMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14962639_665057306989702_4394495154565763093_n.jpg?oh=f7e6f1a25ee1bcdd5dd69264a7bd197e&oe=58B84197",
           "buttons": [{
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for second element in a generic bubble",
           }],
-        }]
+        } ,{
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+         }]
       }
     }
   }
@@ -261,7 +306,7 @@ function sendEntertainmentMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
           }],
         }, {
@@ -270,10 +315,23 @@ function sendEntertainmentMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14953575_667298550098911_9186132226253692818_n.jpg?oh=ee9d421d662f1c85c2e939f26ab2ae37&oe=58D577FB",
           "buttons": [{
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for second element in a generic bubble",
           }],
-        }]
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+         }]
       }
     }
   }
@@ -311,7 +369,7 @@ function sendSportsMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
           }],
         }, {
@@ -320,10 +378,23 @@ function sendSportsMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14925771_666715536823879_1924831144549562241_n.jpg?oh=447b1bffe9825b7ff802db821c02c41c&oe=58CECA1F",
           "buttons": [{
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for second element in a generic bubble",
           }],
-        }]
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+         }]
       }
     }
   }
@@ -361,7 +432,7 @@ function sendlifestyleMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
           }],
         }, {
@@ -370,10 +441,23 @@ function sendlifestyleMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/15056258_672096459619120_3328037144239154473_n.jpg?oh=e4a56ed7b188732c8eb65d275288c5ed&oe=58B8BA50",
           "buttons": [{
             "type": "postback",
-            "title": "Postback",
+            "title": "Summary",
             "payload": "Payload for second element in a generic bubble",
           }],
-        }]
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Summary",
+            "payload": "Payload for first element in a generic bubble",
+          }],
+         }]
       }
     }
   }

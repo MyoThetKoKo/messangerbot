@@ -39,7 +39,7 @@ app.post('/webhook/', function (req, res) {
         continue
       }
       else if (text === 'Topstories'){
-        sendlistMessage(sender)
+        sendTopstoriesMessage(sender)
         continue
       }
       else if (text === 'News'){

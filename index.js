@@ -60,10 +60,10 @@ app.post('/webhook/', function (req, res) {
       }
       sendGreetingMessage(sender)
     }
-    (event.postback && event.postback.payload) {
-      payload = event.postback.payload;
-      // Handle a payload from this sender
-    }
+      if (event.postback) {
+      let text = JSON.stringify(event.postback)
+      sendTextMessage(sender, text.substring(0, 200), token)
+      continue
     }
   }
   res.sendStatus(200)

@@ -497,7 +497,7 @@ function sendmenuMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-0/c0.11.200.200/p200x200/15036693_672096482952451_286439968195064488_n.jpg?oh=d69c842f166981c66476f760a0a27e54&oe=58BCB9A9",
           "buttons": [{
             "type": "web_url",
-            "url": "https://drive.google.com/open?id=0BxuIjI-2X6CPZHY3b19Lc3VSUVlqMWxVNUtCV1FWSUpwcmFz",
+            "url": "http://www.duwun.com.mm/news/",
             "title": "web url"
           }, {
             "type": "postback",
@@ -519,7 +519,7 @@ function sendmenuMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
           "buttons": [{
             "type": "web_url",
-            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "url": "http://www.duwun.com.mm/lifestyle/",
             "title": "web url"
           }, {
             "type": "postback",

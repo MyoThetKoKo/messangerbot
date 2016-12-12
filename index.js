@@ -1,4 +1,3 @@
-
 'use strict'
 
 const express = require('express')
@@ -25,7 +24,9 @@ app.get('/webhook/', function (req, res) {
     res.send(req.query['hub.challenge'])
   }
   res.send('Error, wrong token')
-})
+}
+)
+
 
 // to post data
 app.post('/webhook/', function (req, res) {
@@ -39,8 +40,12 @@ app.post('/webhook/', function (req, res) {
         sendGenericMessage(sender)
         continue
       }
+      else if (text === 'Menu'){
+        sendmenuMessage(sender)
+        continue
+      }
       else if (text === 'Topstories'){
-        sendTopstoriesMessage(sender)
+        sendlistMessage(sender)
         continue
       }
       else if (text === 'News'){
@@ -51,7 +56,7 @@ app.post('/webhook/', function (req, res) {
         sendEntertainmentMessage(sender)
         continue
       }
-      else if (text === 'lifestyle'){
+      else if (text === 'Lifestyle'){
         sendlifestyleMessage(sender)
         continue
       }
@@ -61,7 +66,7 @@ app.post('/webhook/', function (req, res) {
       }
       sendGreetingMessage(sender)
     }
-      if (event.postback) {
+    if (event.postback) {
       let text = JSON.stringify(event.postback)
       sendTextMessage(sender, text.substring(0, 200), token)
       continue
@@ -267,7 +272,7 @@ function sendNewsMessage(sender)
           }, {
             "type": "postback",
             "title": "Summary",
-            "payload": "Payload for second element in a generic bubble",
+            "payload": "Payload for first element in a generic bubble",
           }],
          }]
       }
@@ -457,6 +462,69 @@ function sendlifestyleMessage(sender)
             "type": "postback",
             "title": "Summary",
             "payload": "Payload for first element in a generic bubble",
+          }],
+         }]
+      }
+    }
+  }
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages',
+    qs: {access_token:token},
+    method: 'POST',
+    json: {
+      recipient: {id:sender},
+      message: messageData,
+    }
+  }, function(error, response, body) {
+    if (error) {
+      console.log('Error sending messages: ', error)
+    } else if (response.body.error) {
+      console.log('Error: ', response.body.error)
+    }
+  })
+}
+
+function sendmenuMessage(sender) 
+{
+  let messageData = {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "Duwun1",
+          "subtitle": "Element #1 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-0/c0.11.200.200/p200x200/15036693_672096482952451_286439968195064488_n.jpg?oh=d69c842f166981c66476f760a0a27e54&oe=58BCB9A9",
+          "buttons": [{
+            "type": "web_url",
+            "url": "https://drive.google.com/open?id=0BxuIjI-2X6CPZHY3b19Lc3VSUVlqMWxVNUtCV1FWSUpwcmFz",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Topstories",
+            "payload": "Topstories",
+          }],
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/15056258_672096459619120_3328037144239154473_n.jpg?oh=e4a56ed7b188732c8eb65d275288c5ed&oe=58B8BA50",
+          "buttons": [{
+            "type": "postback",
+            "title": "Entertainment",
+            "payload": "Entertainment",
+          }],
+        }, {
+          "title": "Duwun2",
+          "subtitle": "Element #2 of an hscroll",
+          "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
+          "buttons": [{
+            "type": "web_url",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
+            "title": "web url"
+          }, {
+            "type": "postback",
+            "title": "Lifestyle",
+            "payload": "Lifestyle",
           }],
          }]
       }

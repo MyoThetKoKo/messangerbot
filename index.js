@@ -44,12 +44,7 @@ app.post('/webhook/', function (req, res) {
         sendmenuMessage(sender)
         continue
       }
-      
-      sendGreetingMessage(sender)
-    }
-    if (event.postback) {
-      let text = JSON.stringify(event.postback)
-         if (text === 'Topstories'){
+      else if (text === 'Topstories'){
         sendlistMessage(sender)
         continue
       }
@@ -69,12 +64,18 @@ app.post('/webhook/', function (req, res) {
         sendSportsMessage(sender)
         continue
       }
-      
+      sendGreetingMessage(sender)
+    }
+    if (event.postback) {
+      let text = JSON.stringify(event.postback)
+      sendTextMessage(sender, text.substring(0, 200), token)
+      continue
     }
   }
   res.sendStatus(200)
 }
 )
+
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.PAGE_ACCESS_TOKEN
@@ -492,12 +493,12 @@ function sendmenuMessage(sender)
       "payload": {
         "template_type": "generic",
         "elements": [{
-          "title": "Duwun's Topstories",
+          "title": "Duwun1",
           "subtitle": "Element #1 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-0/c0.11.200.200/p200x200/15036693_672096482952451_286439968195064488_n.jpg?oh=d69c842f166981c66476f760a0a27e54&oe=58BCB9A9",
           "buttons": [{
             "type": "web_url",
-            "url": "http://www.duwun.com.mm/news/",
+            "url": "https://drive.google.com/open?id=0BxuIjI-2X6CPZHY3b19Lc3VSUVlqMWxVNUtCV1FWSUpwcmFz",
             "title": "web url"
           }, {
             "type": "postback",
@@ -505,7 +506,7 @@ function sendmenuMessage(sender)
             "payload": "Topstories",
           }],
         }, {
-          "title": "Duwun'Entertainment",
+          "title": "Duwun2",
           "subtitle": "Element #2 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/15056258_672096459619120_3328037144239154473_n.jpg?oh=e4a56ed7b188732c8eb65d275288c5ed&oe=58B8BA50",
           "buttons": [{
@@ -514,12 +515,12 @@ function sendmenuMessage(sender)
             "payload": "Entertainment",
           }],
         }, {
-          "title": "Duwun'Lifestyle",
+          "title": "Duwun2",
           "subtitle": "Element #2 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
           "buttons": [{
             "type": "web_url",
-            "url": "http://www.duwun.com.mm/lifestyle/",
+            "url": "http://www.duwun.com.mm/sports/epl/-id5741234.html",
             "title": "web url"
           }, {
             "type": "postback",

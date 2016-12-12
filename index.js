@@ -44,7 +44,12 @@ app.post('/webhook/', function (req, res) {
         sendmenuMessage(sender)
         continue
       }
-      else if (text === 'Topstories'){
+      
+      sendGreetingMessage(sender)
+    }
+    if (event.postback) {
+      let text = JSON.stringify(event.postback)
+         if (text === 'Topstories'){
         sendlistMessage(sender)
         continue
       }
@@ -64,16 +69,12 @@ app.post('/webhook/', function (req, res) {
         sendSportsMessage(sender)
         continue
       }
-      sendGreetingMessage(sender)
-    }
-    if (event.postback) {
-      let text = JSON.stringify(event.postback)
-      continue
+      
     }
   }
   res.sendStatus(200)
-})
-
+}
+)
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.PAGE_ACCESS_TOKEN

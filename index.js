@@ -492,7 +492,7 @@ function sendmenuMessage(sender)
       "payload": {
         "template_type": "generic",
         "elements": [{
-          "title": "Duwun1",
+          "title": "Duwun's Topstories",
           "subtitle": "Element #1 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-0/c0.11.200.200/p200x200/15036693_672096482952451_286439968195064488_n.jpg?oh=d69c842f166981c66476f760a0a27e54&oe=58BCB9A9",
           "buttons": [{
@@ -505,7 +505,7 @@ function sendmenuMessage(sender)
             "payload": "Topstories",
           }],
         }, {
-          "title": "Duwun2",
+          "title": "Duwun'Entertainment",
           "subtitle": "Element #2 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/15056258_672096459619120_3328037144239154473_n.jpg?oh=e4a56ed7b188732c8eb65d275288c5ed&oe=58B8BA50",
           "buttons": [{
@@ -514,7 +514,7 @@ function sendmenuMessage(sender)
             "payload": "Entertainment",
           }],
         }, {
-          "title": "Duwun2",
+          "title": "Duwun'Lifestyle",
           "subtitle": "Element #2 of an hscroll",
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14666250_653700034792096_6286400383312462415_n.jpg?oh=b8568feb46010026073a41876d7ff5f2&oe=58BC9202",
           "buttons": [{

@@ -67,10 +67,9 @@ app.post('/webhook/', function (req, res) {
       sendGreetingMessage(sender)
     }
     if (event.postback) {
-      let text = JSON.stringify(event.postback)
-      sendTextMessage(sender, text.substring(0, 200), token)
-      continue
-    }
+            console.log("Postback received: " + JSON.stringify(event.postback));
+            continue
+        }
   }
   res.sendStatus(200)
 }
@@ -187,8 +186,8 @@ function sendTopstoriesMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Summary",
-            "payload": "Payload for first element in a generic bubble",
+            "title": "Topstories",
+            "payload": "User " + recipientId,
           }],
         }, {
           "title": "Duwun2",
@@ -196,8 +195,8 @@ function sendTopstoriesMessage(sender)
           "image_url": "https://scontent.fbkk3-1.fna.fbcdn.net/v/t1.0-9/14695309_659017747593658_7823234448286722387_n.jpg?oh=01b1df2658a85e53a1fc91f085b59011&oe=58BCEF8A",
           "buttons": [{
             "type": "postback",
-            "title": "Summary",
-            "payload": "Payload for second element in a generic bubble",
+            "title": "Entertainment",
+            "payload": "User " + recipientId,
           }],
         }, {
           "title": "Duwun2",
@@ -209,8 +208,8 @@ function sendTopstoriesMessage(sender)
             "title": "web url"
           }, {
             "type": "postback",
-            "title": "Summary",
-            "payload": "Payload for first element in a generic bubble",
+            "title": "Lifestyle",
+            "payload": "User " + recipientId,
           }],
          }]
       }

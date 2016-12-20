@@ -554,7 +554,7 @@ function sendGreetingMessage(sender) {
       "type":"template",
       "payload":{
                         "template_type":"button",
-                         "text":"Hi there, let’s get started. I’ll send you top stories every day",
+                         "text":"Hello, I'm the duwun bot. Please choose one of hte options to get the newest stories.-Topstories-News-Lifestyle-Entertainment-Sports.You can also search by tying keyword.",
                             "buttons":[
                          {
                             "type":"web_url",

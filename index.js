@@ -65,6 +65,7 @@ app.post('/webhook/', function (req, res) {
         continue
       }
       sendGreetingMessage(sender)
+      continue
     }
     if (event.postback) {
       let text = JSON.stringify(event.postback)
